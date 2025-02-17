@@ -16,17 +16,17 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$string['pluginname'] = 'Kurs Önerme';
+$string['pluginname'] = 'Kurs Önerileri';
 $string['recommendcourse'] = 'Kursu Öner';
 $string['recommendbutton'] = 'Öner';
-$string['courserecommend:recommend'] = 'Kurs önerebilir';
-$string['courserecommend:manage'] = 'Kurs önerilerini yönetebilir';
+$string['courserecommend:recommend'] = 'Kullanıcılara kurs öner';
+$string['courserecommend:manage'] = 'Kurs önerilerini yönet';
 $string['nousersselected'] = 'Lütfen en az bir kullanıcı seçin';
 $string['searchusers'] = 'Kullanıcı ara';
 $string['selectusers'] = 'Önermek için kullanıcı seçin';
 $string['recommendationsent'] = 'Kurs önerisi başarıyla gönderildi!';
 $string['yourrecommendations'] = 'Son Önerileriniz';
-$string['courseexcluded'] = 'Bu kurs önerilerden hariç tutulmuştur';
+$string['courseexcluded'] = 'Bu kurs önerilerden hariç tutulmuştur.';
 $string['recommendationsuccess'] = 'Öneri başarıyla kaydedildi';
 $string['excludedcourses'] = 'Hariç Tutulan Kurslar';
 $string['excludedcoursesdesc'] = 'Önerilerden hariç tutulacak kursları seçin';
@@ -37,4 +37,15 @@ $string['privacy:metadata:courserecommend:recommendedto'] = 'Öneriyi alan kulla
 $string['privacy:metadata:courserecommend:timemodified'] = 'Önerinin yapıldığı zaman';
 $string['available_courses'] = 'Mevcut Kurslar';
 $string['search'] = 'Ara';
-$string['excluded_courses'] = 'Hariç Tutulan Kurslar';
+$string['excluded_courses'] = 'Hariç tutulan kurslar';
+$string['recommended_by'] = 'Tarafından önerildi';
+$string['no_recommendations'] = 'Henüz kurs önerisi bulunmuyor.';
+$string['manage_excluded'] = 'Hariç tutulan kursları yönet';
+$string['excluded_courses_desc'] = 'Kullanıcılara önerilemeyen kurslar';
+$string['save_changes'] = 'Değişiklikleri kaydet';
+
+// Modal strings
+$string['modal_title'] = 'Kurs Öner';
+$string['modal_search_placeholder'] = 'Kullanıcı ara...';
+$string['modal_recommend_button'] = 'Öner';
+$string['modal_cancel_button'] = 'İptal';

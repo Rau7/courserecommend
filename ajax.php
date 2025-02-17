@@ -103,7 +103,7 @@ try {
                     //error_log('Table columns: ' . print_r($columns, true));
 
                     // Check if required columns exist
-                    $required_columns = ['id', 'courseid', 'userid', 'recommendedby', 'timemodified'];
+                    $required_columns = ['id', 'courseid', 'userid', 'recommendedby', 'recommendedto', 'timemodified'];
                     $missing_columns = array();
                     foreach ($required_columns as $column) {
                         if (!isset($columns[$column])) {
@@ -131,16 +131,18 @@ try {
                         // Prepare record
                         $record = array(
                             'courseid' => $courseid,
-                            'userid' => $userid,
-                            'recommendedby' => $USER->id,
+                            'userid' => $USER->id,         // Öneren kişi
+                            'recommendedby' => $USER->id,  // Öneren kişi
+                            'recommendedto' => $userid,    // Önerilen kişi
                             'timemodified' => $time
                         );
                         
                         // Try to get existing recommendation
                         $existing = $DB->get_record('local_courserecommend', array(
                             'courseid' => $courseid,
-                            'userid' => $userid,
-                            'recommendedby' => $USER->id
+                            'userid' => $USER->id,         // Öneren kişi
+                            'recommendedby' => $USER->id,  // Öneren kişi
+                            'recommendedto' => $userid     // Önerilen kişi
                         ));
                         
                         if ($existing) {
